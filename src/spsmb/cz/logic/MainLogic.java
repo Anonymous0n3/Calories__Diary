@@ -42,7 +42,7 @@ public class MainLogic {
         switch(itemID){
             case 1: modifyEntry.setWhen(UserInput.returnTime());
             diary.replace(key, modifyEntry);
-            break;
+                break;
             case 2: modifyEntry.setWhat(UserInput.returnFood());
                 diary.replace(key, modifyEntry);
                 break;
@@ -70,6 +70,11 @@ public class MainLogic {
             caloriesTotal = caloriesTotal + entry.getHowMuch();
         }
         fileOutput.writeCaloriesCombined(caloriesTotal);
+
+    }
+
+    public static void menu(){
+        boolean run = true;
     }
 
 

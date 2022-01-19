@@ -16,9 +16,12 @@ public class FileOutput {
 
     public void writeEntry(CaloriesDiary entry) throws IOException {
         write.write(entry.getWhat() + " - " + entry.getWhen() + " - " + entry.getHowMuch() + " calories");
+        write.flush();
     }
 
     public void writeCaloriesCombined(Integer caloriesTotal) throws IOException {
         write.write(caloriesTotal);
+        write.flush();
+        write.close();
     }
 }
